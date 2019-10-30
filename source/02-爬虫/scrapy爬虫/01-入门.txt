@@ -29,3 +29,9 @@ scrapy genspider qidian www.qidian.com
 
 
 
+爬虫项目运行
+？
+格式：
+scrapy crawl 爬虫名称
+例子：
+scrapy crawl qidian
