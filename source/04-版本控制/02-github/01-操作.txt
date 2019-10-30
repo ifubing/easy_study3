@@ -1,0 +1,36 @@
+生成公钥与私钥
+？
+命令：
+ssh-kengen
+效果：
+在提示的路径上会有公钥与私钥生成
+公钥配到网上
+私钥留在电脑
+
+
+
+本地仓库与远程仓库产生一个关联
+？
+格式：
+git remote add origin 路径ssh的
+例子：
+git remote add origin git@github.com:ifubing/py1021.git
+
+
+
+
+本地仓库推送到网上
+？
+格式：
+git push -u origin
+例子：
+git push -u origin
+
+
+
+简洁的查看log日志
+一行显示
+？
+$ git log --pretty=oneline
+
+

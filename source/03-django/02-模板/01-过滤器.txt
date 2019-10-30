@@ -1,0 +1,26 @@
+过滤器的使用格式
+？
+模板变量|过滤器：参数
+例如：
+{{ book.bpub_data|date:'Y年-m月-d日' }}
+
+
+改变日期显示格式的过滤器
+？
+单词：date
+例如：
+{{ book.bpub_data|date:'Y年-m月-d日' }}
+
+
+求长度的过滤器
+？
+单词：length
+例如：
+{{ title|length }}
+
+
+设置默认值的过滤器
+当模板变量没有值时给默认值
+？
+{{ errmsg|default:'无' }}
+

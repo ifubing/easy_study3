@@ -1,0 +1,23 @@
+如何定义一个视图类
+？
+用法：
+导入View类，作为父类
+自定义一个类，继承View类
+例子：商品首页的页面渲染与展示
+from django.views.generic import View
+class IndexView(View):
+    """首页"""
+    def get(self,request):
+        """ 显示首页 """
+        return render(request, "index.html")
+
+
+
+上传图片的目录配置
+？
+一，新建目录，用于存放用户上传的图片
+例如，在static目录下创一个media目录
+二，配置目录
+在settings.py中配置
+# 上传文件的目录保存
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')

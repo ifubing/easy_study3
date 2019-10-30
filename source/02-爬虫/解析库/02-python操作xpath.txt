@@ -1,0 +1,34 @@
+安装lxml
+？
+pip install lxml
+
+
+导入etree
+?
+from lxml import etree
+
+
+把一个html字符串转换为Element对象
+？
+Element对象 = etree.HTML(html字符串)
+备注，Element对象具有xpath方法
+
+
+利用Element对象的xpath方法取值
+？
+格式：
+返回值 = Element对象.xpath(字符串xpath选择语句)
+注意：
+返回值是列表类型
+如果返回值是一个节点
+那么该节点，仍然可以继续使用xpath方法
+
+
+xpath的使用套招
+？
+一，实例化生成一个element对象
+from lxml import etree
+obj = etree.HTML(字符串html内容)
+二，对象.xpath（xpath表达式)
+res = obj.xpath(表达式)
+# res是一个列表，如果列表成员仍然是element对象，他们仍可以使用xpath方法

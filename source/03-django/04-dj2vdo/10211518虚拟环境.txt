@@ -1,0 +1,71 @@
+安装虚拟环境
+?
+pip install virtualenv 
+
+
+
+安装virtualenvwrapper
+?
+》windows系统的安装
+pip install virtualenvwrapper-win
+》linux系统的安装
+pip install virtualenvwrapper
+!
+直接安装virtualenvwrapper，会自动安装virtualenv
+
+
+
+创建虚拟环境
+？
+格式：
+mkvirtualenv 虚拟环境名
+例子：
+mkvirtualenv dailyfresh
+
+
+
+进入虚拟环境
+？
+格式
+workon 环境名
+例子
+workon dailyfresh
+
+
+退出虚拟环境
+？
+用法：
+deactivate
+
+
+
+列出所有虚拟环境
+？
+lsvirtualenv
+
+
+进入虚拟环境所在的目录
+？
+cdvirtualenv
+
+
+修改mkvirtualenv默认路径的办法
+？
+环境变量》系统变量
+添加WORKON_HOME
+
+
+
+
+
+创建虚拟环境时指定python版本
+？
+格式：
+mkvirtualenv --python==解释器的路径 虚拟环境名称
+例子：
+mkvirtualenv --python==c:\Python36\python.exe hy_env
+说明：
+如果同时装有python2 和 python3 在创建虚拟环境的时候需要指定版本，可以这样子搞
+
+
+

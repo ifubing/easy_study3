@@ -1,0 +1,91 @@
+设置后台的语言为中文
+？
+settings.py中配置
+LANGUAGE_CODE='zh-hans'
+！
+中文就用 zh-hans
+
+
+设置时区为中国的时区
+？
+settings.py中配置
+TIME_ZONE='Asia/Shanghai'
+!
+Asia/Shanghai
+是中国的时区
+
+
+
+创建超级管理员
+？
+python manage.py createsuperuser
+
+
+通过哪个文件控制后台
+？
+项目同名目录下admin.py
+用于控制后台
+
+
+如何让后台中显示应用模型类的数据
+即让后台中可见数据库中的内容
+？
+》操作文件admin.py
+》导入模型类
+from 应用 import models
+》注册模型类
+admin.site.register(模型类)
+！
+例子：在admin.py中代码如下：
+from django.contrib import admin
+# 导入模型类
+from bookTest import models
+# 注册模型类（models模块中的Book模型类）
+admin.site.register(models.Book)
+
+
+
+如何控制每一行数据的显示内容
+？
+每一行数据都是一个模型类的实例
+例如： line = models.Book()
+修改Book类的__str__方法
+让该方法返一个字符串即可
+！
+例子：
+class Book(models.Model):
+    title = models.CharField(max_length=20)
+    info = models.CharField(max_length=60)
+    def __str__(self):
+        return self.title
+
+
+每一行数据显示的字段控制
+例如，一行图书信息
+显示id，显示标题，显示出版社等等这些字段的控制
+通过什么方式来实现
+？
+通过模型管理类来实现
+主要步骤有两步
+1，确保有一个模型管理类
+2，注册模型管理类
+
+
+
+如何定义一个模型管理类
+？
+定义一个类，让它继承另一个类，格式如下：
+class 模型管理类名（admin.ModelAdmin）：
+！
+例子：
+class BookAdmin(admin.ModelAdmin):
+    pass
+
+
+如何注册模型管理类
+?
+admin.site.register(模型类，模型管理类）
+！
+admin.site.register(models.Book, BookAdmin)
+
+

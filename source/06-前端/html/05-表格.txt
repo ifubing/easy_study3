@@ -1,0 +1,27 @@
+表格的基本格式
+？
+<table>
+    <thead>
+    <tr><th>序号</th><th>姓名</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>1</td><td>张三</td></tr>
+    </tbody>
+</table>
+说明：table的属性
+border属性 定义表格的边框，设置值是数值
+cellpadding属性 定义单元格内容与边框的距离，设置值是数值
+cellspacing属性 定义单元格与单元格之间的距离，设置值是数值
+align属性 设置整体表格相对于浏览器窗口的水平对齐方式,设置值有：left | center | right
+说明：tr代表一行，td和th代表单元格
+<tr>标签：定义表格中的一行
+<td>和<th>标签：定义一行中的一个单元格，td代表普通单元格，th表示表头单元格，
+<thead>标签，代表表头
+<tbody>标签，代表了表格的主体
+注意：单元格的属性
+align 设置单元格中内容的水平对齐方式,设置值有：left | center | right
+valign 设置单元格中内容的垂直对齐方式 top | middle | bottom
+colspan 设置单元格水平合并，设置值是数值
+rowspan 设置单元格垂直合并，设置值是数值
+
+

@@ -1,0 +1,9 @@
+在模板页中如何加载静态文件
+？
+一，加载模板的配置
+{% load staticfiles %}
+二，利用配置完成静态路径的拼接
+如果有个图片存放在
+项目目录/static/image/a.jpg
+那么这样子拼路径
+{% static 'image/a.jpg'}

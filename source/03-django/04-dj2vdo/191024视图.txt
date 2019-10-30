@@ -1,0 +1,51 @@
+
+模板的渲染，
+把模板文件的内容获取出来
+？
+方式一：render_to_string
+》导入
+from django.template.loader import render_to_string
+》在视图中使用
+def index(request):
+	html = render_to_string(模板名.html)
+	return HttpResponse(html)
+》说明
+这个是render函数的基本，了解即可
+方式二: render 
+》导入
+from django.shortcuts import render
+》在视图中使用
+def index(request):
+	return render(request, 模板名.html)
+
+
+
+
+
+视图给模板传递参数
+？
+render(request, 模板名, 字典)
+
+
+
+reverse函数反转路径-不带参数的反转
+？
+》使用前记得确保导入了
+from django.shortcuts import reverse
+》格式
+reverse(“命名空间：别名”）
+reverse（“别名”）
+
+
+reverse函数反转-带关键词参数的反转
+路由的路径匹配中有关键词捕获时（命名分组的正则表达式）
+？
+格式：
+reverse（别名，kwargs=｛关键词1：值1，关键词2：值2｝)
+例子：
+detail_url= reverse("detail", kwargs={"article_id":16})
+效果：会反向生成别名为detail的路径，同时把article_id的数据拼到对应的位置
+
+
+
+

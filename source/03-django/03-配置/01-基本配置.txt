@@ -1,0 +1,16 @@
+静态目录的配置
+？
+》一，新建一个static目录
+》二，配置这个目录 
+在settings.py中 
+STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]  # 静态目录的高以置
+
+
+模板页中如何使用静态文件
+？
+一，导入静态配置
+{% load staticfiles %}
+二，拼静态文件的路径
+例如在static目录下有image目录，目录下有a.jpg
+这样子拼路径
+{% static 'image/a.jpg'}

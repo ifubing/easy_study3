@@ -1,0 +1,79 @@
+分组
+？
+格式：
+db.集合名.aggregate({_id:"$字段名"})
+例子：按照classname的值来进行分组
+> db.colc.aggregate({$group:{_id:'$classname'}})
+{ "_id" : "java" }
+{ "_id" : "php" }
+{ "_id" : "python02" }
+{ "_id" : "python" }
+{ "_id" : null }
+>
+例子：按照classname的值来进行分组并统计人数
+> db.colc.aggregate({$group:{_id:'$classname',num:{$sum:1}}})
+{ "_id" : "java", "num" : 1 }
+{ "_id" : "php", "num" : 1 }
+{ "_id" : "python02", "num" : 1 }
+{ "_id" : "python", "num" : 1 }
+{ "_id" : null, "num" : 2 }
+>
+例子：分组统计小组人数，统计年龄平均值
+> db.one.aggregate({$group:{_id:"$class",count:{$sum:1},pjnl:{$avg:"$age"}}})
+{ "_id" : "php", "count" : 1, "pjnl" : 86 }
+{ "_id" : "python", "count" : 2, "pjnl" : 28 }
+例子：分组并得到最小值
+> db.one.aggregate({$group:{_id:'$gender', minage:{$avg:'$age'}}})
+{ "_id" : 1, "minage" : 52 }
+{ "_id" : 0, "minage" : 38 }
+>   
+
+
+显示指定的字段
+？
+例子：不显示_id字段，只显示name字段
+> db.one.aggregate({$project:{_id:0, name:1}})
+{ "name" : "张三" }
+{ "name" : "李四" }
+{ "name" : "赵强" }
+>  
+
+
+匹配数据
+？
+例子：查到年龄大于20的数据
+> db.one.aggregate({$match:{age:{$gt:20}}})
+{ "_id" : ObjectId("5db789aede8bde057a298e49"), "name" : "李四", "age" : 38, "gender" : 0, "class" : "python" }
+{ "_id" : ObjectId("5db789c1de8bde057a298e4a"), "name" : "赵强", "age" : 86, "gender" : 1, "class" : "php" }
+>    
+
+
+
+排序
+？
+例子：按照年龄进行升序
+> db.one.aggregate({$sort:{age:1}})
+{ "_id" : ObjectId("5db7896dde8bde057a298e48"), "name" : "张三", "age" : 18, "gender" : 1, "class" : "python" }
+{ "_id" : ObjectId("5db789aede8bde057a298e49"), "name" : "李四", "age" : 38, "gender" : 0, "class" : "python" }
+{ "_id" : ObjectId("5db789c1de8bde057a298e4a"), "name" : "赵强", "age" : 86, "gender" : 1, "class" : "php" }
+>
+例子：按照主键降序显示
+> db.one.aggregate({$sort:{_id:-1}})
+{ "_id" : ObjectId("5db789c1de8bde057a298e4a"), "name" : "赵强", "age" : 86, "gender" : 1, "class" : "php" }
+{ "_id" : ObjectId("5db789aede8bde057a298e49"), "name" : "李四", "age" : 38, "gender" : 0, "class" : "python" }
+{ "_id" : ObjectId("5db7896dde8bde057a298e48"), "name" : "张三", "age" : 18, "gender" : 1, "class" : "python" }
+>
+
+
+分页
+？
+$limit：隠定显示条目数
+$skip：跳过条目数
+例子：限定只显示两条数据
+> db.one.aggregate({$limit:2})
+{ "_id" : ObjectId("5db7896dde8bde057a298e48"), "name" : "张三", "age" : 18, "gender" : 1, "class" : "python" }
+{ "_id" : ObjectId("5db789aede8bde057a298e49"), "name" : "李四", "age" : 38, "gender" : 0, "class" : "python" }
+例子：跳过一条数据
+> db.one.aggregate({$skip:1})
+{ "_id" : ObjectId("5db789aede8bde057a298e49"), "name" : "李四", "age" : 38, "gender" : 0, "class" : "python" }
+{ "_id" : ObjectId("5db789c1de8bde057a298e4a"), "name" : "赵强", "age" : 86, "gender" : 1, "class" : "php" }

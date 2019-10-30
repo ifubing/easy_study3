@@ -1,0 +1,57 @@
+查看当前全部的数据库
+？
+两种查询办法：
+> show databases
+> show dbs
+
+
+
+使用数据库
+？
+格式：
+use 数据库名称
+例子：
+use one
+> use one
+switched to db one
+
+
+
+查看当前正在使用的数据库
+？
+例子：
+> db
+one
+
+
+
+
+创建集合（集合就是数据表）
+？
+例子：创建一个名籽tbtwo的集合
+> db.createCollection("tbtwo")
+{ "ok" : 1 }
+
+
+
+
+查看当前数据库中的全部集合（全部数据表）
+？
+例子：
+> show collections
+spider
+stu
+tbtwo
+>
+
+
+
+
+删除集合
+?
+例子：
+> db.tbtwo.drop()
+true
+
+
+

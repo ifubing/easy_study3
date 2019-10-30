@@ -1,0 +1,30 @@
+python连redis需要安装的包
+？
+pip install redis
+
+
+获得连接对象
+?
+import redis
+conn = redis.StrictRedis(host=ip地址，port=端口, db=0)
+！
+conn代表的是某一个数据库的连接对象
+
+添加string类型的数据
+？
+连接对象.set(键，值)
+
+
+获取string类型的键对应的值
+?
+连接对象.get(键)
+
+
+删除键name,键age
+？
+连接对象.delete("name", "age")
+
+获取所有的键
+？
+连接对象.keys()
+

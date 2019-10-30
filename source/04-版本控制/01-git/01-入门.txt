@@ -1,0 +1,164 @@
+centos系统安装git
+?
+yum install git
+
+
+初始化设置当前目录为仓库目录
+？
+git init
+
+
+仓库内容添加到暂存区
+？
+》添加指定的文件
+git add 文件名
+》添加全部文件
+git add .
+
+
+暂存区内容添加到版本库中
+？
+git commit -m '版本说明'
+
+
+查看日志
+？
+git log
+
+
+
+版本回退
+？
+一，按照版本号回退
+格式：
+git reset --hard 版本号
+例子：
+$ git reset --hard d3064f0
+二，按照数量回退
+方式1：通过^
+例子：回退到前两个版本
+git reset --hard HEAD^^
+方式2：通过~
+例子：回退到前50个版本
+git reset --hard HEAD~50
+
+
+查看版本操作记录
+？
+git reflog
+
+
+删除文件的操作
+？
+1，本地删除
+rm -rf 目标
+2，提交到缓存区
+git add 目标
+3，提交到版本
+git commit -m '版本说明'
+
+
+
+查看分支
+？
+$ git branch
+
+
+创建分支
+？
+格式：
+$ git branch 分支名称
+例子：
+$ git branch dev
+
+
+切换分支
+？
+格式：
+$ git checkout 分支名称
+例子：
+$ git checkout dev
+
+
+创建分支同时切换到新分支
+？
+格式：
+git checkout -b 分支名称
+例子：
+$ git checkout -b zhaoyun
+
+
+合并分支
+？
+格式：
+git merge 另一个分支名称
+例子：
+一，切换到接收分支
+git checkout 接收分支
+$ git checkout master
+二，接收分支合并数据
+》接收dev分支的代码
+git merge dev
+》接收zhaoyun分支的代码
+git merge zhaoyun
+
+
+删除分支
+？
+格式：
+git branch -d 分支名称
+例子：
+$ git branch -d zhaoyun
+
+
+冲突的发生与解决
+？
+》发生
+两个分支在处理同一个文件
+在进行合并分支时，会冲突
+》解决
+手动编辑冲突文档解决
+例如下面是冲突的内容：留下想要的内容， 删掉 >>>   <<< === 等符号
+>>>>>head
+111
+======
+2222
+<<<<<<分支名
+
+
+冲突的预防
+？
+确保当前自己的版本是最新的版本
+只提交属于自己一个人的代码
+如果要提交的是多人合作的文件
+就更更新文件，然后再提交
+
+
+
+缓冲区的内容清除
+清除缓冲区中记录的对某一个文件的修改
+？
+格式：
+git reset HEAD 文件名
+例子：
+git reset HEAD a.py
+显示：
+$ git reset HEAD a.py
+Unstaged changes after reset:
+M       a.py
+
+
+
+工作区的内容恢复为修改前的内容
+？
+格式：
+git checkout -- 文件名
+例子：
+。让所有的内容变为修改前
+$ git checkout -- .
+。让a.py变为修改前
+$ git checkout -- a.py
+图例：
+https://img-blog.csdnimg.cn/20191015150857674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2lmdWJpbmc=,size_16,color_FFFFFF,t_70
+
+

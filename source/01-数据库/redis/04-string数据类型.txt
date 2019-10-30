@@ -1,0 +1,39 @@
+设置classname的值为python01
+?
+127.0.0.1:6379> set classname python01
+
+
+
+获取classname对应的值
+？
+127.0.0.1:6379> get classname
+
+
+
+修改classname的值为pythonOne
+?
+127.0.0.1:6379> set classname pythonOne
+
+设置name键对应的值zgl，5秒钟过期
+？
+127.0.0.1:6379> setex name 5 zgl
+
+
+一次性设置多个键值
+name,zs
+age,18
+gender,ture
+?
+127.0.0.1:6379> mset name zs age 18 gender true
+
+
+往键名为name的值中添加内容2019
+？
+127.0.0.1:6379> append name 2019
+
+
+获取多个键对应的值
+获取name,age,gender键对应的值
+？
+127.0.0.1:6379> mget name age gender
+

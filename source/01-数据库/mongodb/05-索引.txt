@@ -1,0 +1,85 @@
+查找语句执行状态的查看
+？
+db.stu.find({name:'tt'}).explain("executionStats")
+关注
+executionTimeMillis
+
+
+
+查看当前集合的索引
+？
+格式：
+db.集合名.getIndexes()
+例子：
+> db.stu.getIndexes()
+[
+        {
+                "v" : 2,
+                "key" : {
+                        "_id" : 1
+                },
+                "name" : "_id_",
+                "ns" : "dbtwo.stu"
+        }
+]
+>
+
+
+
+
+创建一个普通索引
+？
+例子：
+> db.stu.ensureIndex({name:1})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+>
+
+
+
+
+取消一个索引
+？
+格式：
+db.集合名.dropIndex(索引名称)
+例子：
+> db.stu.dropIndex("name_1")
+{ "nIndexesWas" : 2, "ok" : 1 }
+注意：
+删除索引的时候要先查一下索引对应的名称
+要用‘索引名称’来进行删除
+
+
+
+
+
+创建一个唯一索引
+？
+例子
+> db.stu.ensureIndex({name:1},{unique:true})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+应用：
+可以通过创建一个唯一索引的方式
+来约束字段，不允许重复
+
+
+
+创建一个联合唯一索引
+？
+格式：
+db.集合名.ensureIndex({字段1：1， 字段2：1})
+例子：按照姓名与图片名称建立联合唯一索引
+db.stu.ensureIndex({name:1, bname:1})
+
+
+
+

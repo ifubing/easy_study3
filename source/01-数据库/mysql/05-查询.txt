@@ -1,0 +1,129 @@
+查询，只显示指定的字段
+？
+格式：
+select 字段1， 字段n from 表名；
+例子：
+select id, name from student;
+
+
+查指定的字段，并且控制表头名称
+？
+格式：
+select 字段1 as 表头1，字段n as 表头n from 表名；
+例子：
+select name as 姓名, age as 年龄 from student;
+
+
+
+查询结果消除重复
+？
+格式：
+select distinct 字段 from 表名;
+例子：
+select distinct gender from student;
+
+
+
+查询中的比较运算符
+？
+符号：
+等于 =
+大于 >
+小于 <
+大于等于 >=
+小于等于 <=
+不等于 !=
+例子：
+查询gender字段不为0的数据
+select * from student where gender != 0;
+
+
+逻辑运算符
+？
+符号：
+与 and
+或 or
+非 not 
+例子：
+查询id大于3并且gender等于0的
+select * from student where id>3 and gender=0;
+
+
+模糊查询
+？
+符号：
+like，模糊查询关键词
+%，代表任意多个任意字符
+_，代表一个任意字符
+例子：
+查询name以赵字开头的
+select * from student where name like '赵%';
+查询name是两个字组成的
+select * from student where name like '__';
+
+
+
+范围查询
+？
+关键词：
+in(值1，值n)			不连续范围内
+between...and...	连续范围内
+例子：
+查询id值为1,3,6的学生
+select * from student where id in (1,3,6);
+查询id值在2到8之间的学生
+select * from student where id between 2 and 8;
+
+
+判空查询
+？
+关键词：
+is null			判断为空
+is not null		判断非空
+例子：
+查询gender值为null的数据
+select * from student where gender is null;
+
+
+
+聚合查询
+？
+符号：
+count(*)	统计总数
+max(列)		此列最大值
+min(列)		此列最小值
+sum(列)		此列总和
+avg(列)		此列平均值
+例子：
+查询全部数据有多少条
+select count(*) from student;
+查询年龄最大的值
+select max(age) from student;
+
+
+
+分组，按照某个字段进行分组
+？
+关键词：
+group by
+例子：
+查询男生女生总数
+select gender,count(*) from student group by gender;
+
+
+
+分组与对已分的组进行过滤
+？
+格式：
+group by 列 having 条件
+意义：
+对某一个列进行分组，同时按照某个条件对组进行过滤
+例子：
+select gender,count(*) from student group by gender having gender is not null;
+
+
+having与where的区别
+？
+having对分组后的结果进行过滤
+where对原始的查询数据进行过滤
+where能做的having都能够做，having功能更加，但是过滤的性能弱一些

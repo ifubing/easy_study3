@@ -1,0 +1,112 @@
+如何启动一个线程
+？
+》导入线程模块
+import threading
+》创建线程对象
+t = threading.Thread(target=函数体，args=(参数,))
+》让线程对象运行起来
+t.start()
+！
+明确主线程与子线程的执行与等待关系
+
+
+
+获取当前代码中所有的线程对象，得到一个列表
+？
+threading.enumerate()
+！
+[<_MainThread(MainThread, started 22116)>, <Thread(Thread-1, started 16752)>, <Thread(Thread-2, started 14352)>] 总的
+
+
+获取当前线程的对象
+？
+threading.current_thread()
+
+
+
+线程类的定义与启动
+？
+自定义一个类
+让该类继承threading.Thread
+同时在自定义类中重写run方法
+就可
+例子：
+class Drawing(threading.Thread):
+    def run(self):
+        for x in range(3):
+            print('正在绘制图片', x)
+            time.sleep(1)
+》线程类实例化为一个对象并运行：
+t2 = Drawing()
+t2.start()
+
+
+
+让当前的线程全部执行完毕后
+主线程再进行下一条
+？
+线程对象.join（）
+例子：
+t.join()
+
+
+
+线程锁的定义与使用
+？
+定义
+import threading
+生成线程锁对象
+锁对象 = threading.Lock()
+上锁
+锁对象.acquire()
+解锁
+锁对象.release()
+
+
+
+创建一个线程队列队象
+？
+代码：
+import queue
+q = queue.Queue()
+补充：
+生成一个容量为6的队列对象
+q = queue.Queue(6)
+
+
+往线程队列中存入数据
+？
+代码：
+队列.put(数据)
+说明：
+如果队列满了，会阻塞
+补充：
+队列.put(数据，block=False)
+队列如果满了，就会报一个错误
+
+
+
+
+从线程队列中取出数据
+？
+代码：
+队列.get()
+说明：
+队列如果是空的，会阻塞
+补充：
+队列.get(block=False)
+队列如果空了，就会报一个错误
+
+
+
+队列中计数器减一
+？
+队列.task_done()
+补充：
+一般与队列等待共同使用
+
+
+队列中的等待
+？
+队列.join()
+可以让任务没有完成的队列，阻塞

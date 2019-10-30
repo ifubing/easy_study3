@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/githouse/source_one" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/source" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/source - 副本" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/source - 副本 - 副本" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/source/py01-source" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/source/source_one" vcs="Git" />
+  </component>
+</project>

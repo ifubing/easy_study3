@@ -1,0 +1,59 @@
+学生成绩表， stu_score
+[{
+	"stu_id": "ie40",
+	"test_id": "ic45200807",
+	"score": 14,
+	"level": 2.0,
+	"grade_list": [4, 1, 1],
+	"last_time": 1565751992
+}]
+
+题目源，从数据库中提取出来的
+< class 'dict' >: {
+	'ask': ['下载django\n'],
+	'ans': ['pip install django\n'],
+	'tips': [],
+	'1': 'django',
+	'2': '01基础篇',
+	'3': '01-项目与应用.txt',
+	'file_path': 'G:\\易三\\source\\django\\01基础篇\\01-项目与应用.txt',
+	'test_id': 'qx74151503'
+}
+
+
+
+考试目标源
+self.test_target
+[{
+	'ask': ['写出文件名称\n', '用户请求一个网址，会有一个功能函数去处理该网址的功能逻辑\n', '这个请求路径与函数名称的对应关系写在该文件中\n', '哪个文件担任这个功能\n'],
+	'ans': ['urls.py\n'],
+	'tips': [],
+	'1': 'django-test',
+	'2': '02-基本使用',
+	'3': '01-路由系统.txt',
+	'file_path': 'G:\\易三\\source\\django-test\\02-基本使用\\01-路由系统.txt',
+	'test_id': 'fg21065025'
+}]
+
+
+自己选择题目源
+{'1': 'django-test', '2': '02-基本使用'}
+
+
+
+》190825 解决每一次更新资料都会删题的情况
+
+直接提取的题目源，数据结构
+< class 'dict' >: {
+	'ask': ['下载django\n'],
+	'ans': ['pip install django\n'],
+	'tips': [],
+	'1': 'django',
+	'2': '01基础篇',
+	'3': '01-项目与应用.txt',
+	'file_path': 'G:\\易三\\source\\django\\01基础篇\\01-项目与应用.txt'
+}
+
+
+
+

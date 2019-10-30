@@ -1,0 +1,60 @@
+插入数据-全列插入
+全部字段的值都插入
+？
+格式：
+insert into 表名 values(值1，值n)
+例子：
+insert into student values(0, 'pyhui',18);
+
+
+插入数据-缺省插入
+只插入部分字段的值
+？
+格式：
+insert into 表名（字段1，字段n） values(值1，值n);
+例子：
+insert into student (name) values('ggyy');
+
+
+
+插入数据-插入多条数据
+？
+格式：
+insert into 表名（字段1，字段n） values(值1，值n)，(值1，值n);
+例子：
+insert into student(name) values('cat'), ('dog'),('mie');
+说明：
+括号，括号，括号
+这样的方式传多个值
+
+
+
+查询数据表中全部数据，查看全部字段
+？
+格式：
+select * from 表名;
+例子：
+select * from student;
+
+
+删除指定的数据行
+？
+格式：
+delete from 表名 where 条件；
+例子：
+delete from student where id>4;
+
+
+
+修改数据
+？
+格式：
+update 表名 set 列1=值1，列2=值2 where 条件
+例子：
+update student set name='赵云',age=23 where id=3;
+注意：
+一定不要漏了where 条件，否则所有数据都被改掉
+
+
+
+

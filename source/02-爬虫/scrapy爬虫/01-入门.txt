@@ -1,0 +1,31 @@
+安装scrapy
+？
+pip install scrapy
+
+
+
+创建项目
+？
+格式：
+scrapy startproject 项目名称
+例子：
+scrapy startproject xiaoshuo
+效果：
+会在当前目录创建一个目录
+
+
+
+创建爬虫
+？
+格式：
+scrapy genspider 爬虫名称 允许访问的域名
+例子：
+scrapy genspider qidian www.qidian.com
+注意：
+要先cd到项目目录中
+然后再创建爬虫
+效果：
+在spiders目录中新增了一个爬虫名.py
+
+
+

@@ -1,0 +1,68 @@
+发起一个get请求
+？
+# 导入模块
+import request
+# 发起请求
+响应对象 = requests.get(网址)
+
+
+发起一个带请求头的get请求
+？
+requests.get(网址，headers=字典)
+
+
+发起一个get请求，带上参数
+？
+request.get(url, params=参数字典)
+!
+效果，会在url后拼上传递的参数
+例如http://www.baidu.com/?name=zs&age=18
+post请求同理
+
+
+发起请求，伪装为浏览器
+？
+办法，发起请求时，在请求头中添加user-agent数据
+
+
+
+使用代理发起请求
+？
+request.get(网址，proxies=代理字典)
+！
+代理字典的格式：
+{"协议"："ip：端口""}
+例如：
+{"http":"http://12.34.56.01:8000", "https":"https://12.34.56.01:8000"}
+
+
+发起一个post请求
+？
+requests.post(url, params=参数字典)
+
+
+访问用户中心的办法
+？
+一，请求头中带上cookies数据
+request.get(网址，headers=字典)
+备注，字典中存一个cookie的键值对
+键是：Cookie
+值就是类似于这样的字符串：uuid_tt_dd=10_28743412270-1569723942844-420746; dc_session_id=10_1569723942844.879679; 
+二，get方法带上cookie参数,值是一个字典
+格式：
+response = request.get(url, headers=请求头字典, cookies=cookie字典)
+字典的键是：uuid_tt_dd
+值是：10_28743412270-1569723942844-420746
+字典的完整形态类以于
+{
+'uuid_tt_dd'='10_28743412270-1569723942844-420746',
+'dc_session_id'='10_1569723942844.879679'
+}
+三，使用session类
+1，实例化一个对session类对象
+2，让该对象去登陆网站，登陆成功对象便得到了cookie数据
+3，让该对象去访问用户中心URL，访问时会带上cookie。所以可以得到正确的响应。
+例子：
+s = requests.session()
+s.post(登陆url, params=参数字典)
+res = s.get(用户中心url)

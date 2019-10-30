@@ -1,0 +1,59 @@
+创建与数据库的连接
+定位到数据库
+定位到集合
+？
+# 导入pymongo的客户端类
+from pymongo import MongoClient
+# 实例化得到一个对象
+client = MongoClient(host="127.0.0.1", port=27017)
+# 连接数据库
+db = client['one']
+print(db)
+# 连接到集合
+col = db['stu']
+print(col)
+
+
+
+
+插入数据
+？
+》插入一条数据
+例子：
+res = 集合对象.insert_one({"name":"悟空2", "age":500, "skill":"龟派气功"})
+》插入多条数据
+例子：
+集合对象.insert_many(列表包字典)
+
+
+
+
+查找
+？
+查找一条数据：
+res = 集合对象.find_one({"name":"qq"})
+查找多条数据：
+res = 集合对象.find({"gender":True})
+
+
+
+修改
+？
+》修改一条
+集合对象.update_one({条件字典})
+》修改多条
+集合对象.update_many({条件字典})
+例子：
+res = 集合对象.update_many({"gender":True},{"$set":{"skill":"无言"}})
+
+
+
+删除
+？
+功能：
+可以删除一个，或者删除多个
+格式：
+集合对象.delete_one（条件字典）
+集合对象.delete_many(条件字典)
+
+

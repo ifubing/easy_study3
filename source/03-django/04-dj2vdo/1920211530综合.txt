@@ -1,0 +1,118 @@
+
+url是统一资源定位符，它的组成结构
+？
+格式：
+scheme：//host:port/path/?k1=v1&k2=v2#anchor
+详解：
+scheme，协议
+host，主机名
+port，端口号
+path，路径
+k1=v1&k2=v2，get参数
+
+
+
+web服务器，应用服务器，web应用框架
+？
+web服务器，处理http请求，例如nginx
+应用服务器，处理逻辑的服务器
+应用框架，封装好的编程语言
+
+
+
+
+DEBUG模式的功能
+位于settings.py中的DEBUG的功能
+？
+1，开启后修改django代码并保存后，服务器会重启
+2，如果项目中出现了错误，会在浏览器与控制台打印错误
+3，上线以后需要设置把DEBUG=False
+4，如果 DEBUG设置为False，必需设置ALLOWED_HOSTS
+
+
+
+ALLOWED_HOSTS的功能
+？
+配置中ALLOWED_HOSTS的功能
+只有列表中的ip才可以访问
+
+
+
+
+命令创建django项目
+？
+格式：
+django-admin startproject 项目名称
+例子：
+diango-admin startproject first_project
+效果：
+会在当前目录下创建一个目录，名称是项目名
+
+
+
+
+用代码运行一个项目
+？
+python manage.py runserver
+期望它以指定的ip和端口运行
+python mange.py runserver IP地址：端口
+
+
+
+
+pycharm创建django项目
+？
+一，New project>django
+二，设置路径，虚拟环境，等
+
+
+
+
+总路由
+为什么总路由从urls.py中开始找
+？
+在settings.py中配置了
+ROOT_URLCONF='项目名.urls'
+
+
+
+
+捕捉路径上的参数，传递给视图，关键词方式传参，使用path函数
+？
+例子：假设路径的格式
+path('book/<名称1>/<名称2>/', 视图）
+对应的视图需要这样定义：
+def 视图名（request， 名称1， 名称2）：
+注意，视图中的形参要与path里尖括号里名称保持一致
+视图中就可以得到数据
+
+
+
+
+
+
+
+
+
+
+视图中获取get方式传递过来的参数
+？
+在视图中通过
+request.GET 获取get传参的字典
+通过request.GET[键] 获取字典中键所对应的值
+
+
+
+
+
+url转换器
+path方法捕捉路径上的参数
+限定参数的类型
+？
+例子：
+path('book/publisher/<int:publisher_id>/', 视图）
+本写法限定了路径中publisher_id位置的类型，为int类型
+默认的转换器是str
+小结：
+url转换器限定的是什么类型，视图函数得到的参数就是什么类型
+常用的类型有int, str

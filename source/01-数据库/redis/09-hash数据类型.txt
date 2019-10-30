@@ -1,0 +1,91 @@
+哈希的数据结构
+？
+redis数据库是键值形式的
+比如0号数据库有一个name键存的字符串，有一个lis键存的列表，结构如下：
+｛"name":"zs", "lis":[1,2,3]｝
+如果该库中有一个键名为ha的数据是哈希类型，它在redis中的形态为：
+｛"name":"zs", "lis":[1,2,3], "ha":{"f1":"v1","f2":"v2"}｝
+博客：
+https://blog.csdn.net/ifubing/article/details/101427123
+
+
+添加单个哈希字段值对
+设置zs键为哈希，存值
+字段height 170
+？
+格式：
+hset 键 字段1 值1
+例子：
+hset zs height 170
+
+
+添加多个哈希字段值对
+设置ls键为哈希，存多个字段值对
+字段height 177
+字段weight 66
+？
+格式：
+hmset 键 字段1 值1 字段n 值n
+例子：
+hmset ls height 177 weight 66
+
+
+
+获取一个哈键的所有字段
+？
+格式：
+hkeys 键
+例如：获取一个键名为zs的哈希数据中所有字段
+hkeys zs
+
+
+
+获取一个哈希数据某个字段的值
+？
+格式：
+hget 键 字段
+例子：获取zs键对应的哈希数据中height字段的值
+hget zs height
+
+
+
+一次获取哈希值中多个字段的值
+？
+格式：
+hmget 键 字段1 字段n
+例子：获取zs的height字段值，weight字段值
+hmget zs height weight
+
+
+获取所有字段对应的值
+？
+格式：
+hvals 键
+例子：获取zs的所有值
+hvals zs
+
+
+
+删除整个哈希数据
+？
+格式：
+del 键
+例子：删掉键为zs的哈希数据
+del zs
+
+
+删除哈希数据某一个字段
+？
+格式：
+hdel 键 字段
+例子：删除zs的weight字段
+hdel zs weight
+
+
+
+获取一共有多少个键值对
+？
+格式：
+hlen 键
+例子：获取zs一共有多少个字段
+hlen zs

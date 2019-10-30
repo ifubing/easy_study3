@@ -1,0 +1,49 @@
+表单标签
+？
+例子：
+<form action="" method="get" enctype="multipart/form-data"></form>
+说明：
+如果数据需要提交到某个网址需要使用表单标签
+
+
+
+
+input控件的各种类型
+？
+格式：
+<input type="类型">
+例子：
+<input type="text">
+分类：
+type="text" 定义单行文本输入框
+type="password" 定义密码输入框
+type="radio" 定义单选框
+type="checkbox" 定义复选框
+type="file" 定义上传文件
+type="submit" 定义提交按钮
+type="reset" 定义重置按钮
+type="button" 定义一个普通按钮
+type="image" 定义图片作为提交按钮，用src属性定义图片地址
+type="hidden" 定义一个隐藏的表单域，用来存储值
+value属性 定义表单元素的值
+name属性 定义表单元素的名称，此名称是提交数据时的键名
+
+
+
+多行文本输入框
+？
+例子：
+    <textarea name="" id="" cols="30" rows="10">内容区</textarea>
+
+
+
+下拉框
+？
+例子
+    <select name="place" id="">
+        <option value="1">武汉</option>
+        <option value="2">长沙</option>
+    </select>
+
+
+    

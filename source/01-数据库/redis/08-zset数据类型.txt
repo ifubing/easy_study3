@@ -1,0 +1,32 @@
+往z1键中添加内容，权重与值分别为
+5 five 
+3 three 
+2 two 
+11 eleven
+？
+127.0.0.1:6379> zadd z1 5 five 3 three 2 two 11 eleven
+
+
+获取z1键的所有成员值
+？
+127.0.0.1:6379> zrange z1 0 -1
+
+
+获取z1键里权值在1到5范围的数据
+？
+127.0.0.1:6379> zrangebyscore z1 1 5
+
+
+获取z1键中数据three的权值
+？
+127.0.0.1:6379> zscore z1 three
+
+
+删除z1键里的两个成员two,three
+？
+127.0.0.1:6379> zrem z1 two three
+
+
+删除z1键中权值在4到10范围的数据
+？
+127.0.0.1:6379> zremrangebyscore z1 4 10

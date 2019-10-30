@@ -1,0 +1,60 @@
+html的基本结构
+？
+<!DOCTYPE html>
+<html lang="en">
+    <head>            
+        <meta charset="UTF-8">
+        <title>网页标题</title>
+    </head>
+    <body>
+          网页显示内容
+    </body>
+</html>
+
+
+
+注释
+？
+<!-- 注释内容写在这里 -->
+
+
+
+样式标签
+？
+样式代码写在这里
+<style>
+样式代码写这里
+</style>
+
+
+
+载入其它样式文件
+？
+<link rel="stylesheet" href="m.css">
+
+
+
+
+特效标签脚本标签
+放javascript代码的标签
+？
+两个效果
+1，加载其它js文件
+<script src="js路径"></script>
+2，直接在里面写代码
+<script>样式</script>
+
+
+
+meta标签
+？
+定义网页基本信息的标签
+例如
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="python 人工智能">
+    <meta name="description" content="网站描述">
+
+

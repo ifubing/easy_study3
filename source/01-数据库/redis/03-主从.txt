@@ -1,0 +1,10 @@
+redis主从如何配置
+？
+1，复制配置文件
+例如，redis.conf复制一个，起名为slave.conf
+使用cp命令复制
+2，修改从服务的配置
+slave.conf中添加
+replicaof 主redis的ip地址 端口
+3，确保主从配置的bind被注释，例如，#bind 127.0.0.1
+4，确保主从配置的protected-mode no

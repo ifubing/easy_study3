@@ -1,0 +1,37 @@
+创建数据库
+？
+格式：
+create database 数据库名 charset=utf8;
+例子：
+create database pyhui charset=utf8;
+
+
+
+删除数据库
+？
+格式：
+drop database 数据库名;
+例子：
+drop database pyhui;
+
+
+查看所有的数据库
+？
+格式：
+show databases;
+
+
+
+切换数据库
+？
+格式：
+use 数据库名;
+例子：
+use test;
+
+
+查看当前选中的是哪个数据库
+？
+select database();
+
+

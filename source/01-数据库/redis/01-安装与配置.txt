@@ -1,0 +1,32 @@
+默认的端口号
+？
+6379
+
+如何启动服务端
+？
+redis-server 配置的地址
+！
+[root@192 ~]# redis-server /etc/redis/redis.conf
+
+
+如何查看redis是否启动
+？
+ps aux|grep redis
+!
+[root@192 ~]# ps aux|grep redis
+
+
+默认的数据库数量
+？
+16
+！
+取值范围是0-15
+
+
+如何选择数据库
+？
+select n
+!
+n的取值范围是0-15
+select 5
+代表选取了索引值为5的redis数据库
