@@ -1,0 +1,74 @@
+字段类型，AutoField
+？
+例子：定义一个字段，名字为id
+bookid = models.AutoField(primary_key=True)
+效果：
+自增长，主键
+AutoField是自增长的一个类型
+primary_key定义它为主键
+如果一个模型类中没有定义主键
+django会自动的创建一个主键
+
+
+
+字段类型，BigAutoField
+？
+例子：定义一个更大取值范围的主键
+    pid = models.BigAutoField(primary_key=True)
+
+
+
+
+
+字段类型，BooleanField
+?
+说明：
+在模型类接收True或False
+存到数据表中会以1和0的形式保存，tinyint类型
+例子：
+》定义字段，在models.py中
+    remove = models.BooleanField(default=False)
+    remove = models.BooleanField()
+》给字段添加值，在视图中
+行对象.remove = True
+行对象.save（）
+
+
+
+
+允许字段为空
+？
+说明：
+定义字段时，添加参数 null=True
+例子：定义BooleanField字段，允许该字段为空
+    remove = models.BooleanField(null=True)
+
+
+
+
+
+字段类型，NullBooleanField
+？
+例子：定义一个允许为空的布尔类型
+    remove = models.NullBooleanField()
+
+
+
+
+字段类型，CharField
+？
+格式：
+title = models.CharField(max_length=30)
+说明：
+255个字符长度以内可以用
+
+
+
+字段类型，DateTimeField
+？
+例子：
+》创建一个日期时间字段。当新建行对象时，自动插入当时的时间
+pub_date = models.DateTimeField(auto_now_add=True)
+》创建一个日期时间字段。当修改行对象时，自动更正时间为当前时间
+pub_date = models.DateTimeField(auto_now=True)
+

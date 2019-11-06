@@ -1,0 +1,86 @@
+查找条件
+exact精确查找
+？
+格式：
+模型类名.objects.filter(字段__exact=值）
+例子：
+Article.objects.filter(id__exact=14)
+返回值：
+查询集QuerySet
+如果使用get方法，得到的会是一个行对象
+
+
+
+查找条件
+like查找,iexact
+？
+格式：
+模型类.objects.filter(title__iexact=值)
+效果：
+Article.objects.filter(title__iexact='hello')
+相当于：
+select * from articel where title like 'hello'
+
+
+
+
+查看orm的sql语句
+？
+格式
+查询集.query
+例如
+Article.objects.filter(pk=1).query
+结果
+得到sql语句
+
+
+
+查找条件
+包含查找 contains与icontains
+？
+例子，查找标签中包含hello的数据，区分大小写
+Article.objects.filter(title__contains='hello')  # 通过like binary查询
+例子，查找标签中包含hello的数据，不区分大小写
+Article.objects.filter(title__icontains='hello')  # 通过like 查询
+共性：
+包含查找的时候，搜索的词都会被 % 包裹
+例如   like %hello%
+
+
+
+
+查找条件
+in 成员查找
+？
+例子：
+articles = Article.objects.filter(id__in=[1,2,3])
+结果，查询集
+
+
+
+查询条件
+跨表成员判断
+？
+例子：多方文章表与一方分类表
+查找文章id在1 2 3 的全部分类集合
+一方类名.objects.filter(多方类名__字段__in=[值1，值n]）
+Category.objects.filter(article__id__in = [1,2,3])
+利用多方类名的id字段值查询，效果等同于
+Category.objects.filter(article__in = [1,2,3])
+
+
+
+
+查找条件的格式
+？
+格式：
+模型类名.objects.filter(条件)
+条件的格式：
+字段__查询功能词=值
+例如：
+查询id值等于6的数据
+id__exact=6
+查询title中包含天龙的数据
+title__contains='天龙'
+
+

@@ -1,0 +1,76 @@
+宽和高
+？
+width:200px;  /* 设置盒子的宽度，此宽度是指盒子内容的宽度，不是盒子整体宽度(难点) */ 
+height:200px; /* 设置盒子的高度，此高度是指盒子内容的高度，不是盒子整体高度(难点) */
+
+
+
+
+边框
+？
+》可以具体的设置：
+border-top-color:red;    /* 设置顶部边框颜色为红色 */  
+border-top-width:10px;   /* 设置顶部边框粗细为10px */   
+border-top-style:solid;  /* 设置顶部边框的线性为实线，常用的有：solid(实线)  dashed(虚线)  dotted(点线); */
+》连写
+设置上边框
+border-top:10px solid red;
+设置上下左右边框
+border:10px solid red;
+
+
+
+内间距与外间距
+？
+》
+内间距 padding
+外间距 margin
+》具体的设置，以内间距为例（外间距同理，换个单词就可以）
+padding-top：20px;     /* 设置顶部内间距20px */ 
+padding-left:30px;     /* 设置左边内间距30px */ 
+padding-right:40px;    /* 设置右边内间距40px */ 
+padding-bottom:50px;   /* 设置底部内间距50px */
+》连写设置
+有多种写法，详情如下：
+padding：20px 40px 50px 30px; /* 四个值按照顺时针方向，分别设置的是 上 右 下 左  
+padding：20px 40px 50px; /* 设置顶部内边距为20px，左右内边距为40px，底部内边距为50px */ 
+padding：20px 40px; /* 设置上下内边距为20px，左右内边距为40px*/ 
+padding：20px; /* 设置四边内边距为20px */
+
+
+
+盒子的实际占位
+？
+盒子宽度 = width + padding左右 + border左右
+盒子高度 = height + padding上下 + border上下
+
+
+
+
+解决margin-top塌陷
+？
+在两个盒子嵌套时候，内部的盒子设置的margin-top会加到外边的盒子上，导致内部的盒子margin-top设置失败，解决方法如下：
+1、外部盒子设置一个边框
+2、外部盒子设置 overflow:hidden
+3、使用伪元素类：
+.clearfix:before{
+    content: '';
+    display:table;
+}
+
+
+
+
+元素溢出
+？
+overflow的设置项： 
+1、visible 默认值。内容不会被修剪，会呈现在元素框之外。
+2、hidden 内容会被修剪，并且其余内容是不可见的，此属性还有清除浮动、清除margin-top塌陷的功能。
+3、scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+4、auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+5、inherit 规定应该从父元素继承 overflow 属性的值。
+
+
+
+
+

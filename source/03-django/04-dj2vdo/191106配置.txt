@@ -1,0 +1,14 @@
+mysql的配置
+？
+在settings.py中
+配置例子
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dailyfresh',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
+    }
+}

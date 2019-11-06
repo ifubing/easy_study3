@@ -57,3 +57,4 @@ res = 集合对象.update_many({"gender":True},{"$set":{"skill":"无言"}})
 集合对象.delete_many(条件字典)
 
 
+

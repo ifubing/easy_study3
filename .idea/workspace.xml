@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a5e6ea4-8847-4ff2-b3e3-a01ab21d2830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam/2019102417-答案/ilr015_李辉_td68_2019102417_答案.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exam/2019102417-答案/ilr015_李辉_td68_2019102417_答案.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dbsql/databases/python/exam_data" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dbsql/databases/python/exam_data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dbsql/databases/python/source" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dbsql/databases/python/source" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dbsql/databases/python/stu_score" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dbsql/databases/python/stu_score" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

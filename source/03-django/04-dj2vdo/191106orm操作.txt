@@ -1,0 +1,74 @@
+orm添加数据行
+？
+格式1：
+行对象 = 模型类（字段1=值1，字段n=值n）
+行对象.save（）
+格式2：
+行对象 = 模型类（）
+行对象.字段= 值
+行对象.save()
+例子：
+book = models.Book(name='三国演义', price='200')
+book.save()
+
+
+
+orm查询数据
+根据主键来查找
+？
+格式：
+模型类.objects.get(主键字段=值）
+例子：
+book = models.Book.objects.get(pk=1)
+book = models.Book.objects.get(id=1)
+备注：
+pk代表了主键，不论主键是id还是bid，都可以用pk来代替
+查询的返回值是一个行对象
+
+
+
+
+orm查询
+根据其它条件来查询
+？
+格式：
+查询集 = 模型类.objects.filter（字段=值）
+例子：
+books = models.Book.objects.filter(name='三国演义')
+备注：
+结果是一个查询集，查询集中存的是行对象
+扩展：
+获取查询集中的第一个成员
+sanguo = models.Book.objects.filter(name='三国演义').first()
+
+
+
+
+
+orm删除数据
+？
+思路：
+先查询后删除
+格式：
+行对象.delete()
+例子：
+book = models.Book.objects.get(id=1)
+book.delete()
+
+
+
+
+
+修改数据
+？
+格式：
+行对象.字段名=值
+行对象.save()
+例子：
+book = models.Book.objects.get(id=12)
+book.name='水虎传'
+book.save()
+
+
+
+

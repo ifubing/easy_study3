@@ -1,0 +1,22 @@
+定义一个模型类
+？
+在应用的models.py中定义一个类，类要继承models.Model
+例如：
+class Book(models.Model):
+pass
+
+
+
+
+
+生成迁移文件
+把迁移文件生成数据表
+？
+命令：
+python manage.py makemigrations
+python manage.py migrate
+备注：
+只有已经注册了的应用的模型类才会被生成迁移文件
+
+
+
