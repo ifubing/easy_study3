@@ -35,3 +35,29 @@ scrapy genspider qidian www.qidian.com
 scrapy crawl 爬虫名称
 例子：
 scrapy crawl qidian
+
+
+
+发起下一页的请求,get请求
+？
+思路：
+1，拿到下一页的完整路径
+2，yield scrapy.Request(下一页的路径, callback=解析方法)
+
+
+发起下一页请求，post请求
+格式：
+yield scrapy.FormRequest(post地址, formdata=数据字典, callback=回调方法)
+
+
+
+
+从xpath的结果对象中提取内容
+？
+格式
+对象.get()
+或者
+对象.extract_first()
+
+
+

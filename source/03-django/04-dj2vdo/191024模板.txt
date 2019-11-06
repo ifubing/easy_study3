@@ -276,3 +276,59 @@ less，减少
 auto，自动
 escape，释放
 
+
+
+
+定义一个父模板
+？
+原则：
+通用的内容写在父模板中
+不确定的，可变的内容
+留一个块，让子页面填入
+留块的方式：
+{% block 块名称 %}
+{% endblock %}
+例子：
+{% block title %}
+{% endblock %}
+
+
+子页面继承父模板
+往父模板的块中塞入数据
+？
+继承命令：
+{% extends 父模板名称 %}
+往块中塞入数据：
+{% block 块名称 %} 塞入的内容 {% endblock 块名称 %}
+例子：
+{% extends 'base.html' %}
+{% block title %} myweb {% endblock %}
+注意：
+继承了父模板后，只能往块里塞入内容
+块外面的内容，不会被显示出来
+
+
+
+
+导入一个页面的组件
+？
+格式：
+{% include 模板页面 %}
+例子：
+{% include "temp/in_head.html" %}
+my
+说明：
+当前页中的模板变量，在 include 的页面中
+也可以正常使用
+比如当前页中有 {{ username }} 变量， 被include 的页面，也可以使用
+
+
+
+当前模板传参数给 include 的页面
+？
+格式：
+{% include 被包含页面 with 变量名=值 %}
+例子：
+{% include 'header.html' with username='zhiliao' %}
+
+

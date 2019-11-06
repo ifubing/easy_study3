@@ -55,7 +55,9 @@ cdvirtualenv
 添加WORKON_HOME
 
 
-
+删除虚拟环境
+？
+rmvirtualenv 环境名称
 
 
 创建虚拟环境时指定python版本

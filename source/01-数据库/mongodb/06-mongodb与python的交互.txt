@@ -40,9 +40,9 @@ res = 集合对象.find({"gender":True})
 修改
 ？
 》修改一条
-集合对象.update_one({条件字典})
+集合对象.update_one({条件字典},修改为的内容)
 》修改多条
-集合对象.update_many({条件字典})
+集合对象.update_many({条件字典},修改为的内容)
 例子：
 res = 集合对象.update_many({"gender":True},{"$set":{"skill":"无言"}})
 

@@ -24,3 +24,25 @@
 ？
 {{ errmsg|default:'无' }}
 
+
+
+
+自定义过滤器
+？
+一，任意app下创建一个包
+名称必需为
+templatetags
+二，在包下新建一个py文件，名字随便，开始写功能
+例子如下：
+#1 固定写法 导入模块
+from django import template
+#2 固定写法 实例化对象
+register = template.Library()
+#3 写过滤器同时注册该过滤器
+@register.filter
+def addString(value):
+    return value+"good"
+三，确保app已注册
+四，模板中使用。1，先导入。2，再使用。
+{% load my_filter %}
+{{ "张三"|addString}}

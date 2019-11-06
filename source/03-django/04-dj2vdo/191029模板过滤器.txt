@@ -36,3 +36,179 @@ add过滤器
 {{ list1 | add : list2 }}
 
 
+
+
+date过滤器
+？
+用法：
+{{ 数据|date：格式 }}
+例子：
+{{ today|date:"Y/m/d" }}
+
+
+
+default过滤器
+？
+用法：
+{{ 数据|default:默认值}}
+例子：
+{{ value|default:"无数据" }}
+效果：
+如果数据为空时，显示：右边的内容
+空列表空字符串空字典等等
+
+
+
+
+default_if_none过滤器
+？
+用法：
+{{ 数据|default_if_none:默认值}}
+例子：
+{{ value|default_if_none:"我是默认值" }}
+效果：
+当数据仅仅为none的时候，才会显示默认值
+如果数据为空列表时，显示 []
+数据为空字典时，显示 {}
+
+
+
+first与last过滤器
+？
+用法：
+{{ 数据|first }}
+{{ 数据|last }}
+效果：
+first用于拿到数据中第一个成员
+last用于拿到数据中最后一个成员
+
+
+
+
+floatformat过滤器
+？
+用法：2种情况
+{{ 数据|floatformat }}
+{{ 数据|floatformat:n }}
+例子：
+{{ "123.456"|floatformat }}
+结果为 123.5
+{{ "123.00"|floatformat }}
+结果为 123
+{{ "123.4567"|floatformat:2 }}
+结果为123.46
+
+
+
+join过滤器
+？
+例子：
+{{ value|join:"/" }}
+效果：
+value容器的成员以：右边的符号进行连接
+
+
+
+
+length过滤器
+？
+例子：
+{{ value|length }}
+效果
+获取数据的长度
+
+
+
+lower与upper过滤器
+？
+例子：
+{{ value|lower }}
+效果：
+把数据全部变为小写
+例子：
+{{ value|upper}}
+效果：
+把数据全部转变为大写
+
+
+
+random过滤器
+？
+例子：
+{{ value|random }}
+效果：
+从value中随机出一个来
+
+
+
+
+safe过滤器
+？
+例子：
+{{ value|safe }}
+效果：
+value的代码会被浏览器解析
+如果是html代码会生成标签
+如果是js代码会执行
+对于用户提交的数据不要用saft过滤器
+
+
+
+
+slice过滤器
+？
+效果：
+切片的效果
+格式：
+{{ 变量|slice:"起始索引：终止索引：步长" }}
+例子：
+{{ 变量|slice:"2:6" }}
+
+
+
+
+
+striptags过滤器
+？
+例子：
+{{ value|striptags}}
+效果：
+会删掉value中的html标签
+让内容变为纯文本
+
+
+
+truncatechars过滤器
+？
+用法：
+{{ value| truncatechars:n }}
+效果：
+保留n位字符的显示
+其中最后一位的显示是...
+单词：
+truncate，截短缩短
+
+
+
+
+自定义过滤器
+？
+一，任意app下创建一个包
+名称必需为
+templatetags
+二，在包下新建一个py文件，名字随便，开始写功能
+例子如下：
+#1 固定写法 导入模块
+from django import template
+#2 固定写法 实例化对象
+register = template.Library()
+#3 写过滤器同时注册该过滤器
+@register.filter
+def addString(value):
+    return value+"good"
+三，确保app已注册
+四，模板中使用。1，先导入。2，再使用。
+{% load my_filter %}
+{{ "张三"|addString}}
+
+

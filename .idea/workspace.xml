@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a5e6ea4-8847-4ff2-b3e3-a01ab21d2830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/source - 副本 - 副本/02-爬虫/解析库/01-xpath解析.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source - 副本 - 副本/02-爬虫/解析库/01-xpath解析.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/2019102417-答案/ilr015_李辉_td68_2019102417_答案.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exam/2019102417-答案/ilr015_李辉_td68_2019102417_答案.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dbsql/databases/python/exam_data" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dbsql/databases/python/exam_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dbsql/databases/python/source" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dbsql/databases/python/source" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dbsql/databases/python/stu_score" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dbsql/databases/python/stu_score" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +25,16 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/source" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QtuMXUOtRlt4jviliyElnqpTFG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/untitled6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exam_score" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -58,6 +65,28 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main (1)">
+    <configuration name="01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="易三" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/0test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/0test/01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="filehandle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="易三" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,28 +153,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="student" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="易三" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bin" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/student.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test_setting" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="易三" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,10 +178,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.01" />
         <item itemvalue="Python.filehandle" />
         <item itemvalue="Python.source" />
         <item itemvalue="Python.test_setting" />
-        <item itemvalue="Python.student" />
       </list>
     </recent_temporary>
   </component>
@@ -379,7 +386,20 @@
       <workItem from="1572307945035" duration="2514000" />
       <workItem from="1572316839391" duration="1057000" />
       <workItem from="1572318310645" duration="4015000" />
-      <workItem from="1572395885774" duration="650000" />
+      <workItem from="1572395885774" duration="1287000" />
+      <workItem from="1572414394719" duration="4882000" />
+      <workItem from="1572436258104" duration="599000" />
+      <workItem from="1572481776382" duration="2934000" />
+      <workItem from="1572516541870" duration="1847000" />
+      <workItem from="1572567196380" duration="2195000" />
+      <workItem from="1572794720815" duration="976000" />
+      <workItem from="1572821147177" duration="599000" />
+      <workItem from="1572827166067" duration="599000" />
+      <workItem from="1572845502006" duration="599000" />
+      <workItem from="1572864250330" duration="221000" />
+      <workItem from="1572913180264" duration="2417000" />
+      <workItem from="1572970344718" duration="1200000" />
+      <workItem from="1572999033784" duration="599000" />
     </task>
     <servers />
   </component>
@@ -462,9 +482,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$tcp_server.coverage" NAME="tcp_server Coverage Results" MODIFIED="1567066295727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/0815反馈系统" />
     <SUITE FILE_PATH="coverage/$t.coverage" NAME="t Coverage Results" MODIFIED="1571298353666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00test/01-functest" />
-    <SUITE FILE_PATH="coverage/$01.coverage" NAME="01 Coverage Results" MODIFIED="1568635157272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00test/基本" />
     <SUITE FILE_PATH="coverage/$one.coverage" NAME="one Coverage Results" MODIFIED="1571301507600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00test/01-functest" />
     <SUITE FILE_PATH="coverage/$2.coverage" NAME="2 Coverage Results" MODIFIED="1571328702815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00test" />
+    <SUITE FILE_PATH="coverage/$01.coverage" NAME="01 Coverage Results" MODIFIED="1572485250297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/0test" />
     <SUITE FILE_PATH="coverage/$setting.coverage" NAME="setting Coverage Results" MODIFIED="1566203684564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/0815反馈系统" />
     <SUITE FILE_PATH="coverage/$02_.coverage" NAME="02-起始页的爬取思路 Coverage Results" MODIFIED="1571386186656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/001-课堂项目" />
     <SUITE FILE_PATH="coverage/$tcp_client2.coverage" NAME="tcp_client2 Coverage Results" MODIFIED="1566355354833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/0815反馈系统" />
@@ -485,7 +505,7 @@
     <SUITE FILE_PATH="coverage/$11.coverage" NAME="11 Coverage Results" MODIFIED="1568632662595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00test/木" />
     <SUITE FILE_PATH="coverage/$test_setting.coverage" NAME="test_setting Coverage Results" MODIFIED="1571647606422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$main.coverage" NAME="main Coverage Results" MODIFIED="1571359806139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/001-课堂项目/无忧爬虫" />
-    <SUITE FILE_PATH="coverage/$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1572320890350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1572597336460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1568634622701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00test/素数" />
     <SUITE FILE_PATH="coverage/$36krspider.coverage" NAME="36krspider Coverage Results" MODIFIED="1571291205028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00test/spider1016" />
     <SUITE FILE_PATH="coverage/$spidertool.coverage" NAME="spidertool Coverage Results" MODIFIED="1571384084347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/001-课堂项目" />
