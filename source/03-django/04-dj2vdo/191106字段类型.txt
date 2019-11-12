@@ -72,3 +72,163 @@ pub_date = models.DateTimeField(auto_now_add=True)
 》创建一个日期时间字段。当修改行对象时，自动更正时间为当前时间
 pub_date = models.DateTimeField(auto_now=True)
 
+
+
+
+
+字段参数，null
+？
+功能：
+控制字段是否允许为空，默认字段的null=False
+注意，是针对数据库的一个限定
+例子：
+author = models.CharField(max_length=20)
+定义了一个字符串的字段
+如果行对象不给该字段给值，该字段默认会存空字符串
+例子：
+    num = models.IntegerField()
+定义了一个非字符串类型，没有定义null = True
+如果行对象不给它赋值，会报错，不允许为空的错误
+如果允许该字段为空，可以这样定义字段
+    num = models.IntegerField(null = True)
+
+
+
+
+字段参数，blank
+？
+说明：
+参数与数据库无关
+后台管理录入数扭时有关
+设置blank=True表示允许为空，后台管理的前端的验证
+例子：
+age = models.IntegerField(null=True, blank=True)
+
+
+
+字段参数，db_column
+?
+效果，定义该字段的别名
+例子：
+age = models.IntegerField(null=True, blank=True, db_column="bigage")
+这样子定义的字段，在数据表中，字段名称就是bigage，而不是age了
+
+
+
+
+字段参数，db_column
+?
+效果，定义该字段的别名
+例子：
+age = models.IntegerField(null=True, blank=True, db_column="bigage")
+这样子定义的字段，在数据表中，字段名称就是bigage，而不是age了
+
+
+
+字段参数，default
+？
+功能：
+字段的默认值
+例子：
+age = models.IntegerField(default=18)
+效果：
+如果新建了一个行对象，不给age字段赋值，默认就是18
+
+
+
+
+
+字段参数，primary_key
+?
+功能：
+字段设置为主键
+例子：
+id = models.AutoField(primary_key=True)
+效果：
+当前字段设置为主键
+注意，一个表只能够有一个主键
+
+
+
+
+
+字段参数，unique
+？
+功能：
+唯一
+例子：
+telephone = models.CharField(max_length=11, unique=True)
+效果：
+数据表中该字段绝对唯一不可重复
+
+
+
+
+自定义模型类迁移生成的数据表的名称
+？
+办法：
+模型类中定义一个Meta 类，
+类中的db_table属性值，决定了生成的表名称
+例子：
+class Book(models.Model):
+name = models.CharField(max_length=20)
+class Meta:
+db_table='book'
+
+
+
+
+数据表默认排序的自定义
+？
+办法：
+模型类中定义Meta类
+类里的ordering是列表
+列表写按什么排序
+例子：
+class Book(models.Model):
+name = models.CharField(max_length=20)
+class Meta:
+db_table='book'
+ordering=['pub_date']   # 按照出版日期由小到大排序
+
+
+
+定义一个外键字段，关联另一张表
+？
+格式：
+字段 = models.ForeignKey(模型类名， on_delete=models.CASCADE)
+例子：
+category = models.ForeignKey("Category", on_delete=models.CASCADE)
+注意：
+如果另一张表是另一个应用的
+模型类名要写成这样的形式
+应用名.模型类名
+例如：
+”app01.Category“
+"good.sku"
+
+
+
+外键关联，自关联的写法
+？
+格式：
+字段 = models.ForeignKey("self", on_delete=models.CASCADE)
+
+
+
+外键的删除类型
+on_delete有哪些类型
+功能效果会别对应什么
+？
+外键的例子：
+publisher = models.ForeignKey("publisher", on_delete = 类型)
+类型及效果：
+CASCADE，级联删除
+PROTECT，受保护的
+SET_NULL，设置为空
+SET_DEFAULT，设置为默认值，注，默认值要是行对象
+SET（值或者函数），设置为指定的这个值，注，值要是行对象。 或者设置为函数运行的结果
+DO_NOTHING，不采取任何行为，一切全看数据库级别的约束
+
+
+

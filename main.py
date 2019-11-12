@@ -24,8 +24,7 @@ class EasyStudy:
 
     def start(self):
         # 显示一个欢迎菜单插入学生的成绩成功
-        self.show_menu()
-
+        self.menu = self.show_menu()
 
         # 用户输入数字编号，执行对应的功能
         self.select_func()

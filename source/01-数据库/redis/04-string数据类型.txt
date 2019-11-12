@@ -17,6 +17,7 @@
 设置name键对应的值zgl，5秒钟过期
 ？
 127.0.0.1:6379> setex name 5 zgl
+172.16.212.104:6379> set age 10 ex 6
 
 
 一次性设置多个键值
@@ -32,8 +33,9 @@ gender,ture
 127.0.0.1:6379> append name 2019
 
 
+
+
 获取多个键对应的值
 获取name,age,gender键对应的值
 ？
 127.0.0.1:6379> mget name age gender
-

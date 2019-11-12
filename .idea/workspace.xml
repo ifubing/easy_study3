@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a5e6ea4-8847-4ff2-b3e3-a01ab21d2830" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/exam_score" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../snfresh" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -395,6 +396,16 @@
       <workItem from="1572913180264" duration="2417000" />
       <workItem from="1572970344718" duration="1200000" />
       <workItem from="1572999033784" duration="599000" />
+      <workItem from="1573085501983" duration="1808000" />
+      <workItem from="1573124501446" duration="598000" />
+      <workItem from="1573172138555" duration="660000" />
+      <workItem from="1573191172583" duration="1690000" />
+      <workItem from="1573210627040" duration="593000" />
+      <workItem from="1573380470524" duration="867000" />
+      <workItem from="1573431185131" duration="2055000" />
+      <workItem from="1573464494333" duration="503000" />
+      <workItem from="1573484277068" duration="594000" />
+      <workItem from="1573517333505" duration="599000" />
     </task>
     <servers />
   </component>
@@ -458,7 +469,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>44</line>
+          <line>43</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

@@ -1,3 +1,107 @@
+查询模型类的全部数据
+？
+格式：
+模型类.objects.all()
+例子：
+Articel.objects.all()
+结果是一个查询集
+
+
+
+反向查询，默认形式
+通过一方数据，找多方数据
+例如：通过一个分类，查找该分类下的全部文章
+？
+格式：
+一方行对象.多方类名称小写形态_set.all（）
+例子：
+category=Category.objects.first()  # 得到分类行对象一个
+all_article = category.article_set.all()  # 得到所有的文章对象
+
+
+
+
+
+反向查询，给多方表起关联名称
+？
+使用前：
+在模型类定义阶段
+外键的字段设置时，传一对参数
+related_name=别名
+例如：
+category=models.ForeignKey('category', on_delete=models.CASCADE, related_name='articles'）
+当前这个字段是多方表的一个键键
+正常的反向查询是这样的，拿所有的数据
+一方对象.多方类名小写_set.all()
+例如：
+category.article_set.all()   # 此处的article是类名称
+设置了related_name后的反向查询是这样的
+一方对象.关联名称.all()
+例如：
+category.articles.all()  # 此处的articles是related_name的值
+
+
+
+
+多方对象添加到一方对象的关联中
+例如，把天龙八部这篇文章添加到武侠小说分类中
+？
+格式：
+天龙八部对象.外键字段 = 武侠小说对象
+天龙八部对象.外键字段_id = 武侠小说对象的id
+例子：
+tianlong = Article.objects.get(id=12)
+wuxia = Category.objects.get('name'='武侠小说')
+tianlong.category = wuxia 
+方式二
+tianlog.category_id = ID值
+
+
+
+
+一方对象添加多方对象到关联中
+例如：在武侠小说分类中添加天龙八部小说
+？
+格式：
+一方对象.反向属性.add（多方对象1，多方对象2）
+一方对象.save()
+关于反向属性说明：
+如果多方表的外键字段定义了related_name，那么就取它的值
+如果多方表外键字段没有定义related_name，那么反向查询的属性，就是
+多方表类名小写_set
+例子：
+wuxia = Category.objects.get('name'='武侠小说')  # 分类行对象，一方对象
+tianlong = Article.objects.get('title'='天龙八部')  # 图书对象，多方对象
+wuxia.article_set.add(tianlong)  # 一方对象.多方类名小写_set.add(多方行对象)
+wuxia.save()
+
+
+例如：新建一个文章，文章的分类为必填项目时的添加情况
+新建多方新行对象关联到一方行对象，解决关联字段不能为空的问题
+？
+主要的：
+bulk=False
+格式：
+新建文章对象  # 但是可以不用保存
+分类对象.反向属性.add（新的文章对象，bulk=False)
+例子：
+tianlong = Article()
+tianlong.title='天龙八部'
+category = Category.objects.get('name'='武侠小说')
+category.article_set.add(tianlong, bulk=False)
+关注：
+正常情况下，天龙八部对象新建好后要save一下的，即 tianlong.save()
+此法不需要save
+解决了当Article表的文章分类字段为不允许为空的情况下，保存会报错的问题
+
+
+
+
+
+
+
+
+
 查找条件
 exact精确查找
 ？
@@ -82,5 +186,88 @@ Category.objects.filter(article__in = [1,2,3])
 id__exact=6
 查询title中包含天龙的数据
 title__contains='天龙'
+
+
+
+
+查找条件
+比较运算符
+？
+用法：
+大于，gt
+大于等于，gte
+小于，lt
+小于等于，lte
+例子：
+Article.objects.filter(id__lte=3)
+
+
+
+查找条件
+查找以某某开头
+以某某结束
+？
+开头
+startswith，区分大小写
+istartswith，不区分大小写
+结尾
+endswith，
+iendswith，
+例子：
+查找标题内容以三，开头的数据
+Article.objects.filter(title__startswith='三')
+
+
+查询条件，时间范围段
+查询时间范围在一到二之间的数据
+？
+例子：
+Article.objects.filter(create_time__range=(start_time, end_time))
+
+
+
+
+
+查找条件
+按照日期查找
+？
+例子：
+Article.objects.filter(pub_date__date=datetime.date(2019,10,06)
+
+
+
+
+查找条件
+按照年月日查找
+？
+单词
+year
+month
+day
+例子
+Article.objects.filter(create_time__year__gte=2019)
+
+
+
+查找条件
+查找空
+？
+isnull
+例子
+create_time__isnull=True 
+反之，查找非空的
+create_time__isnull=False
+
+
+
+查找条件
+正则查找
+？
+regex，正则查找，区分大小写
+iregex，不区分大小写
+例子
+title__regex=r'^天龙"
+
+
 
 
